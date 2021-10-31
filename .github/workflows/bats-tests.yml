@@ -2,9 +2,6 @@ name: Run Bats tests
 
 on:
   workflow_dispatch:
-  push:
-    tags:
-      - main
 
 jobs:
   test:
@@ -17,5 +14,4 @@ jobs:
         uses: ffurrer2/bats-action@v1
         with:
           community: docker-cli
-          args: ./test/test.bats
-          
+          args: ./test/test.bats   
