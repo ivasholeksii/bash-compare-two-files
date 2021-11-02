@@ -13,8 +13,10 @@ jobs:
         with:
           bats-version: 1.2.1
 
-      - name: Check out code
+      - name: Check out code and submodules
         uses: actions/checkout@v1
+        with:
+          submodules: recursive
 
       - name: Test
         run: bats -r .   
